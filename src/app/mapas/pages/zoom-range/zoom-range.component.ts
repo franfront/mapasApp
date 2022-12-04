@@ -69,11 +69,11 @@ export class ZoomRangeComponent implements AfterViewInit, OnDestroy {
       }
     });
 
-    this.mapa.on('move', (e) => {// move es cuando se mueve el mapa
-        const target = e.target;
-        const {lng, lat} = target.getCenter();
-        this.latLong = [lng, lat];
-
+    this.mapa.on('move', (e) => {
+      // move es cuando se mueve el mapa
+      const target = e.target;
+      const { lng, lat } = target.getCenter();
+      this.latLong = [lng, lat];
     });
   }
 

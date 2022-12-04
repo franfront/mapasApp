@@ -1,1 +1,15 @@
-<p>marcadores works!</p>
+<ul class="list-group">
+  <li class="list-group-item list-group-item-info" (click)="agregarMarcador()">
+    + Agregar
+  </li>
+  <li
+    class="list-group-item"
+    (click)="irMarcador(marker.marker!)"
+    *ngFor="let marker of markers; let i = index"
+    [ngStyle]="{'background-color': marker.color}"
+  > <button (click)="borrarMarker(i)" type="button" class="btn btn-outline-danger"><i class="bi bi-trash"></i></button>
+    Marker {{ i + 1 }}
+  </li>
+</ul>
+
+<div #mapaZoom class="mapa-cotainer"></div>
